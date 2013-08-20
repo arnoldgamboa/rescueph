@@ -1,3 +1,23 @@
+<h2>From SMS</h2>
+<table class="zebra-striped">
+	<thead>
+		<th>Phone no</th>
+		<th>Message</th>
+		<th>Date sent</th>
+		<th>&nbsp;</th>
+		<?php foreach ($sms as $s): ?>
+			<tr id="sms_<?php echo $s->id;?>">
+				<td><?php echo $s->number ?></td>
+				<td><?php echo $s->message ?></td>
+				<td><?php echo date('M. d, Y g:i a', $s->date_posted) ?></td>
+				<td>[ <a href="javascript:;" id="<?php echo $s->id ?>" class="processed">mark processed</a>	]</td>
+			</tr>
+		<?php endforeach ?>
+	</thead>
+
+</table>
+
+<h2>From Web Submissions</h2>
 <p>
 <?php
 require_once(APPPATH . '/vendor/enthropia/class.form_generator.php');
@@ -67,3 +87,16 @@ if (!empty($status)) { echo '&nbsp;' . $status->name; }
 <p>No Rescues.</p>
 
 <?php endif; ?>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".processed").click(function(){
+			id = $(this).attr('id');
+			if (confirm('Are you sure this record has been processed?')) {
+				$.get("<?php echo Uri::create('ajax/sms_processed/') ?>" + id, function(){
+					$("#sms_" +id).hide();
+				});
+			};
+		});
+	});
+</script>

@@ -9,6 +9,7 @@ class Model_SMS extends Model
 		'message',
 		'message_id',
 		'date_posted',
+		'processed',
 	);
 
 	protected static $_table_name = "sms";

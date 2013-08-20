@@ -86,6 +86,15 @@ class Controller_Admin extends Controller_Template
 		}
 		$this->template->set_global('statuses', $c, false);
 
+		//sms
+		$sms = Model_Sms::find('all', array(
+			'order_by' => array('date_posted' => 'desc'),
+			'where' => array('processed' => 'N'),
+
+		));
+
+		$this->template->content->sms = $sms;
+
 	}
 
 

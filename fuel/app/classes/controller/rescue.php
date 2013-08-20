@@ -61,6 +61,8 @@ class Controller_Rescue extends Controller_Template
 		//areaSelectOptions
 		$areaSelectOptions = General::getAreaSelectOptions();
 		$this->template->set_global('areaSelectOptions', $areaSelectOptions, false);
+
+		
 	}
 	
 	
