@@ -1,4 +1,4 @@
-<div class="well">
+<div class="well" style="font-size:14px;">
 	<h3>Send rescue request through Text (SMS)</h3>
 	<p>Text: "RescuePH < Name of person to rescue > < address, municipality> <situation> <contact# of person to rescue>" SEND TO <strong>26008 (Globe)</strong> or <strong>68008 (SMART)</strong> <br>
 Sample: "RescuePH Juan dela Cruz #5 Avenida Ave, Davao City Collapsed roof 0918-1231234"
