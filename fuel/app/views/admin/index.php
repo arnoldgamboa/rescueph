@@ -1,7 +1,7 @@
 <h2>From SMS</h2>
 <table class="zebra-striped">
 	<thead>
-		<th>Phone no</th>
+		<th>Phone no.</th>
 		<th>Message</th>
 		<th>Date sent</th>
 		<th>&nbsp;</th>
