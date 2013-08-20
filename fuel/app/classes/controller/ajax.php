@@ -17,5 +17,26 @@ Class Controller_Ajax extends Controller
 		return $view;
 
 	}
+
+	public function action_sms()
+	{
+		$data = array(
+			"number" => Input::post('number'),
+			"message" => Input::post('message'),
+			"message_id" => Input::post('message_id'),
+			"date_posted" => time(),
+			);
+
+		$new = new Model_SMS($data);
+		$new->save();
+
+		if ($new) {
+			return true;
+		}else
+		{
+			return false;
+		}
+
+	}
 }
  ?>
