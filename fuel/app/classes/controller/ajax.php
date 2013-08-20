@@ -25,6 +25,29 @@ Class Controller_Ajax extends Controller
 			"message" => Input::post('message'),
 			"message_id" => Input::post('message_id'),
 			"date_posted" => time(),
+			"processed" => "N",
+			);
+
+		$new = new Model_SMS($data);
+		$new->save();
+
+		if ($new) {
+			return true;
+		}else
+		{
+			return false;
+		}
+
+	}
+
+	public function action_sms1()
+	{
+		$data = array(
+			"number" => Input::get('mobile'),
+			"message" => Input::get('text'),
+			"message_id" => "SMART",
+			"date_posted" => time(),
+			"processed" => "N",
 			);
 
 		$new = new Model_SMS($data);
@@ -52,8 +75,9 @@ public function action_sms2()
 		$data = array(
 			"number" => Input::get('phone'),
 			"message" => Input::get('text'),
-			"message_id" => Input::post('device'),
+			"message_id" => Input::get('device'),
 			"date_posted" => time(),
+			"processed" => "N",
 			);
 
 		$new = new Model_SMS($data);

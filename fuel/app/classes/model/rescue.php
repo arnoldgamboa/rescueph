@@ -14,7 +14,8 @@ class Model_Rescue extends Model
 		'status_id',
 		'theuser_id',
 		'lat',
-		'lng'
+		'lng',
+		'date_added',
 	);
 
 	protected static $_belongs_to = array(

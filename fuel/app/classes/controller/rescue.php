@@ -62,7 +62,7 @@ class Controller_Rescue extends Controller_Template
 		$areaSelectOptions = General::getAreaSelectOptions();
 		$this->template->set_global('areaSelectOptions', $areaSelectOptions, false);
 
-		
+
 	}
 	
 	
@@ -182,6 +182,7 @@ class Controller_Rescue extends Controller_Template
 					'theuser_id' => $theuser_id,
 					'lat' => $lat,
 					'lng' => $lng,
+					'date_added' => time(),
 				));
 
 

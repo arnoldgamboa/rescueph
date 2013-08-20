@@ -1,3 +1,11 @@
+<div class="well">
+	<h3>Send rescue request through Text (SMS)</h3>
+	<p>Text: "RescuePH < Name of person to rescue > < address, municipality> <situation> <contact# of person to rescue>" SEND TO <strong>26008 (Globe)</strong> or <strong>68008 (SMART)</strong> <br>
+Sample: "RescuePH Juan dela Cruz #5 Avenida Ave, Davao City Collapsed roof 0918-1231234"
+</p>
+<p>- OR -</p>
+<h3>Send your request <a href="/rescue/create" class="btn danger">now</a></h3>
+</div>
 <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true&region=Metro+Manila"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <?php echo Asset::js('jquery.ui.map.js') ?>

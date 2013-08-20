@@ -54,6 +54,8 @@ if (!empty($status)) { echo '&nbsp;' . $status->name; }
 			<th>Reporter</th>
 			<th>Source</th>
 			<th>Status</th>
+			<th>&nbsp;</th>
+			<th>Date Added</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -74,6 +76,8 @@ if (!empty($status)) { echo '&nbsp;' . $status->name; }
 					green
 				<?php endif ?>"><?php echo $rescue->status->name; ?></span></td>
 			<td><?php if (!empty($rescue->theuser)) { echo $rescue->theuser->name; } ?></td>
+			<td><?php echo $rescue->date_added ? date('M. d, Y g:i a', $rescue->date_added )  : "Aug. 20, 2013 7:00 pm"?></td>
+			
 			<td style="font-size:10px">
 				<?php echo Html::anchor('admin/edit/'.$rescue->id, 'Update status'); ?> |
 				<?php echo Html::anchor('admin/delete/'.$rescue->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
