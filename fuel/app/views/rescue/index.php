@@ -9,7 +9,7 @@ Sample: "RescuePH Juan dela Cruz #5 Avenida Ave, Davao City Collapsed roof 0918-
 <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true&region=Metro+Manila"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <?php echo Asset::js('jquery.ui.map.js') ?>
-	<p>
+<p>
 <?php
 require_once(APPPATH . '/vendor/enthropia/class.form_generator.php');
 $form = new form_generator();
