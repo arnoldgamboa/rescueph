@@ -46,7 +46,7 @@ Class Controller_Ajax extends Controller
 				time()
 			));
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, 'http://snadbox.131db.com/safenow/smsreceiver.php');
+			curl_setopt($ch, CURLOPT_URL, 'http://sandbox.131db.com/safenow/smsreceiver.php');
 			curl_setopt($ch, CURLOPT_POST, 4);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
 			$rslt = curl_exec($ch); // TODO: catch result
