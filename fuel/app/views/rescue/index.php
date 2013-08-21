@@ -80,6 +80,7 @@ elseif (!empty($regionInfo)) { echo '<h2>' . $regionInfo->region_name . '</h2>';
 			<!-- <th>Reporter</th> -->
 			<!-- <th>Source</th> -->
 			<th>Status id</th>
+			<th>Date submitted</th>
 			<!-- <th></th> -->
 		</tr>
 	</thead>
@@ -108,6 +109,7 @@ elseif (!empty($regionInfo)) { echo '<h2>' . $regionInfo->region_name . '</h2>';
 				<?php echo Html::anchor('rescue/delete/'.$rescue->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
 
 			</td> -->
+			<td><?php echo $rescue->date_added ? date('M. d, Y g:i a', $rescue->date_added )  : "Aug. 20, 2013 7:00 pm"?></td>
 		</tr>
 <?php endforeach; ?>	</tbody>
 </table>

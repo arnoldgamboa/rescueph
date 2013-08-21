@@ -23,6 +23,7 @@
 				<?php echo Html::anchor('rescue/delete/'.$rescue->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
 
 			</td> -->
+			<td><?php echo $rescue->date_added ? date('M. d, Y g:i a', $rescue->date_added )  : "Aug. 20, 2013 7:00 pm"?></td>
 		</tr>
 <?php endforeach; ?>
 </table>
