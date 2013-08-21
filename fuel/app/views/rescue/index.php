@@ -3,7 +3,6 @@
 	<p style="font-size:14px;">Text: "RescuePH < Name of person to rescue > < address, municipality> <situation> <contact# of person to rescue>" SEND TO <strong>26008 (Globe)</strong> or <strong>68008 (SMART)</strong> <br>
 Sample: "RescuePH Juan dela Cruz #5 Avenida Ave, Davao City Collapsed roof 0918-1231234"
 </p>
-
 <p>- OR -</p>
 <h3>Send your request <a href="/rescue/create" class="btn danger">now</a></h3>
 </div>
