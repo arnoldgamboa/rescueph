@@ -37,7 +37,21 @@ Class Controller_Ajax extends Controller
 		{
 			return false;
 		}
-
+		
+		if(function_exists('curl_init')) {
+			$payload = vsprintf('number=%s&message=%s&message_id=%s&date_posted=%s', array(
+				urlencode(Input::post('number')),
+				urlencode(Input::post('message')),
+				urlencode(Input::post('message_id')),
+				time()
+			));
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, 'http://snadbox.131db.com/safenow/smsreceiver.php');
+			curl_setopt($ch, CURLOPT_POST, 4);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+			$rslt = curl_exec($ch); // TODO: catch result
+			curl_close($ch);
+		}
 	}
 
 	public function action_sms1()
@@ -60,6 +74,20 @@ Class Controller_Ajax extends Controller
 			return false;
 		}
 
+		if(function_exists('curl_init')) {
+			$payload = vsprintf('number=%s&message=%s&message_id=%s&date_posted=%s', array(
+				urlencode(Input::post('number')),
+				urlencode(Input::post('message')),
+				'SMART',
+				time()
+			));
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, 'http://snadbox.131db.com/safenow/smsreceiver.php');
+			curl_setopt($ch, CURLOPT_POST, 4);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+			$rslt = curl_exec($ch); // TODO: catch result
+			curl_close($ch);
+		}
 	}
 
 public function action_sms_processed($id)
