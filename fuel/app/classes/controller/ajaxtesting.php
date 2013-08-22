@@ -1,5 +1,5 @@
 <?php 
-Class Controller_Ajax extends Controller
+Class Controller_Ajaxtesting extends Controller
 {
 	public function action_more($offset)
 	{
