@@ -1,0 +1,61 @@
+repo_name: arnoldgamboa/rescueph
+report_id: 6356a3909b48a860dc6c50515016c109
+repo_type: Public
+timestamp: '2023-11-10T04:08:06+00:00'
+requested_by: jploh
+provider: github
+branch: master
+detected_tools_count: 5
+tools:
+- name: Hack
+  description: A programming language for HHVM that interoperates seamlessly with
+    PHP
+  website_url: http://hacklang.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1208/download.png
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: public_html/assets/js/bootstrap.js
+  last_updated_by: Arnold Gamboa
+  last_updated_on: 2013-08-19 07:53:32.000000000 Z
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source: Repo Metadata
+- name: MongoDB
+  description: The database for giant ideas
+  website_url: http://www.mongodb.com/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1030/leaf-360x360.png
+  detection_source: fuel/core/classes/mongo/db.php
+  last_updated_by: Arnold Gamboa
+  last_updated_on: 2013-08-19 07:53:32.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
